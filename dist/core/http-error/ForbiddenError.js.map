@@ -1,1 +1,0 @@
-{"version":3,"file":"ForbiddenError.js","sourceRoot":"","sources":["../../../src/core/http-error/ForbiddenError.ts"],"names":[],"mappings":";;;AAAA,2CAAwC;AACxC,mCAAoC;AAEpC,MAAa,cAAe,SAAQ,qBAAS;IACzC,IAAW,IAAI;QACX,OAAO,iBAAS,CAAC,SAAS,CAAC;IAC/B,CAAC;CACJ;AAJD,wCAIC"}

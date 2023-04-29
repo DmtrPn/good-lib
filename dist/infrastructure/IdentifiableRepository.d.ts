@@ -1,4 +1,4 @@
-import { Class, Optional } from '@project-types/common';
+import { Class, Optional } from '../types/common';
 import { Entity } from '../domain';
 import { Repository } from './Repository';
 /**
@@ -6,7 +6,7 @@ import { Repository } from './Repository';
  * M - ORM entity
  * FO - search options
  */
-export declare abstract class IdentifiableRepository<E extends Entity, M, FO> extends Repository<E, M, FO> {
+export declare abstract class IdentifiableRepository<E extends Entity, M extends Object, FO> extends Repository<E, M, FO> {
     protected ormEntity: Class<M>;
     protected constructor(modelClass: Class<M>);
     get(id: E['id']): Promise<Optional<E>>;

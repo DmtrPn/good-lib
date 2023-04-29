@@ -29,6 +29,6 @@ class FakeParams {
         return this.change.birthday();
     }
 }
-exports.FakeParams = FakeParams;
 FakeParams.change = new chance_1.Chance();
+exports.FakeParams = FakeParams;
 //# sourceMappingURL=FakeParams.js.map

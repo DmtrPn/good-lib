@@ -1,4 +1,4 @@
-import { Optional } from '@project-types/common';
+import { Optional } from '../types/common';
 export declare abstract class ICrudService<M, CP, UP, FO> {
     abstract find(options: FO): Promise<M[]>;
     abstract getById(id: string): Promise<Optional<M>>;

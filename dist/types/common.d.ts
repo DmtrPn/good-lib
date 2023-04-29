@@ -7,10 +7,6 @@ export type Attributes<T extends object> = Omit<T, MethodKeys<T>>;
 export type MethodKeys<T> = {
     [P in keyof T]: T[P] extends Function ? P : never;
 }[keyof T];
-export declare enum SortingOrder {
-    ASC = "asc",
-    DESC = "desc"
-}
 export type Identifiable<Id = unknown> = {
     id: Id;
 };

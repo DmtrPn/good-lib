@@ -59,9 +59,6 @@ class FindCommand extends TransactionManager_1.TransactionManager {
     createBuilder(modelClass, alias) {
         return this.manager.createQueryBuilder(modelClass, alias);
     }
-    getTableName(modelClass) {
-        return this.manager.connection.getMetadata(modelClass).tableName;
-    }
     async getResult() {
         return this.isReturnEmpty ? [] : this.getMany();
     }

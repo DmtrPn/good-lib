@@ -24,5 +24,4 @@ __exportStar(require("./IdentityCrudService"), exports);
 __exportStar(require("./QueryService"), exports);
 __exportStar(require("./Repository"), exports);
 __exportStar(require("./TransactionManager"), exports);
-__exportStar(require("./types"), exports);
 //# sourceMappingURL=index.js.map

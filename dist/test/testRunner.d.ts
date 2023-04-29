@@ -1,1 +1,0 @@
-import '@core/di/testIoC';

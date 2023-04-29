@@ -1,8 +1,8 @@
 import { SelectQueryBuilder } from 'typeorm';
-import { Class, Nullable } from '@project-types/common';
+import { Class, Nullable } from '../types/common';
 import { TransactionManager } from './TransactionManager';
 type ValueType<M, P extends keyof M> = Nullable<M[P]> | Nullable<M[P]>[] | undefined;
-export declare abstract class FindCommand<M, FO> extends TransactionManager {
+export declare abstract class FindCommand<M extends Object, FO> extends TransactionManager {
     protected modelClass: Class<M>;
     protected qb: SelectQueryBuilder<M>;
     private isReturnEmpty;
@@ -17,7 +17,6 @@ export declare abstract class FindCommand<M, FO> extends TransactionManager {
     private get tableName();
     private checkListOnSetAndEmpty;
     private createBuilder;
-    private getTableName;
     private getResult;
 }
 export {};

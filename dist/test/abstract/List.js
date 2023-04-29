@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.List = void 0;
 const compact_1 = __importDefault(require("lodash/compact"));
-const isDefined_1 = require("@utils/isDefined");
-const DateHelper_1 = require("@utils/DateHelper");
+const isDefined_1 = require("../../utils/isDefined");
+const DateHelper_1 = require("../../utils/DateHelper");
 class List {
     constructor(params) {
         this.identifiableFieldName = 'id';
@@ -111,6 +111,7 @@ class List {
         return true;
     }
     getId(value) {
+        // @ts-ignore
         return value[this.identifiableFieldName];
     }
     filterFieldValue(value, filterValue, fieldName) {

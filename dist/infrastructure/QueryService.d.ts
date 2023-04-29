@@ -1,4 +1,4 @@
-import { Class } from '@project-types/common';
+import { Class } from '../types/common';
 import { TransactionManager } from './TransactionManager';
 import { FindCommand } from './FindCommand';
 export interface IQueryService<M extends object, FO extends object = {}, R = M> {

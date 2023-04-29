@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IdentifiableRepository = void 0;
-const http_error_1 = require("@core/http-error");
-const isDefined_1 = require("@utils/isDefined");
+const http_error_1 = require("../http-error");
+const isDefined_1 = require("../utils/isDefined");
 const Repository_1 = require("./Repository");
 /**
  * E - domain entity

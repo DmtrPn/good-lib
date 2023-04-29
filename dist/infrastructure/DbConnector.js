@@ -30,7 +30,7 @@ class DbConnector {
             this.dataSource.namingStrategy = new typeorm_naming_strategies_1.SnakeNamingStrategy();
             if (!this.dataSource.isInitialized) {
                 await this.createConnection()
-                    .then((connection) => {
+                    .then(connection => {
                     if (connection.isInitialized) {
                         this.logger.info(`Connection to the database: ${connection.options.database} is established`);
                     }

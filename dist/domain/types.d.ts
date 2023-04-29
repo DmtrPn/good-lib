@@ -1,4 +1,4 @@
-import { Identifiable } from '@project-types/common';
+import { Identifiable } from '../types/common';
 export interface BaseFindOptions<I = string> {
     id?: I[];
 }

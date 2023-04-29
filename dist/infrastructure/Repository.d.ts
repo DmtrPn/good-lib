@@ -1,4 +1,4 @@
-import { Class } from '@project-types/common';
+import { Class } from '../types/common';
 import { TransactionManager } from './TransactionManager';
 import { FindCommand } from './FindCommand';
 /**
@@ -6,7 +6,7 @@ import { FindCommand } from './FindCommand';
  * M - ORM entity
  * FO - search options
  */
-export declare abstract class Repository<E, M, FO> extends TransactionManager {
+export declare abstract class Repository<E, M extends Object, FO> extends TransactionManager {
     protected ormEntity: Class<M>;
     protected constructor(modelClass: Class<M>);
     find(findOption?: FO): Promise<E[]>;

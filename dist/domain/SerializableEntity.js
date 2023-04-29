@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SerializableEntity = void 0;
-const assignParams_1 = require("@utils/assignParams");
+const assignParams_1 = require("../utils/assignParams");
 class SerializableEntity {
     constructor(params) {
         this.checkCreateParams(params);

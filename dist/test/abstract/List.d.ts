@@ -1,9 +1,9 @@
-import type { Optional } from '@project-types/common';
+import type { Optional } from '../../types/common';
 export declare const enum SortingOrder {
     ASC = "asc",
     DESC = "desc"
 }
-import { DateType } from '@utils/DateHelper';
+import { DateType } from '../../utils/DateHelper';
 export interface IList<ListParams, CreateParams, FilterParams = null, I = string> {
     ids: I[];
     isDataSet: boolean;

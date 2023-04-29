@@ -1,4 +1,4 @@
-import { Class, Attributes } from '@project-types/common';
+import { Class, Attributes } from '../types/common';
 import { TransactionManager } from './TransactionManager';
 import { FindCommand } from './FindCommand';
 export declare abstract class CrudService<M extends object, CreationParams extends Partial<M>, UpdateParams = Omit<Attributes<M>, 'id'>, FO extends object = {}> extends TransactionManager {
