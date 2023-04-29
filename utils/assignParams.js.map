@@ -1,0 +1,1 @@
+{"version":3,"file":"assignParams.js","sourceRoot":"","sources":["../src/utils/assignParams.ts"],"names":[],"mappings":";;;AAAA,SAAgB,YAAY,CAAmB,EAAK,EAAE,MAAS;IAC3D,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC,OAAO,CAAC,GAAG,CAAC,EAAE;QAC9B,aAAa;QACb,EAAE,CAAC,GAAG,CAAC,GAAG,MAAM,CAAC,GAAG,CAAC,CAAC;IAC1B,CAAC,CAAC,CAAC;AACP,CAAC;AALD,oCAKC"}

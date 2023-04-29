@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
-  "main": "dist",
-  "types": "dist",
+  "main": "",
+  "types": "",
   "scripts": {
     "build": "yarn clean:dist && ./node_modules/.bin/tsc",
     "build:dev": "yarn clean:dist && yarn prettier:fix && yarn lint && ./node_modules/.bin/tsc  --watch",

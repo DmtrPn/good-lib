@@ -1,6 +1,6 @@
 import { EntityManager, EntityMetadata, getConnection } from 'typeorm';
 import { getEntityManagerOrTransactionManager } from 'typeorm-transactional-cls-hooked';
-import { Class } from '../types/common';
+import { Class } from '../types';
 
 export abstract class TransactionManager {
     protected get manager(): EntityManager {

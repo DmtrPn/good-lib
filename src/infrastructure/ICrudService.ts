@@ -1,4 +1,4 @@
-import { Optional } from '../types/common';
+import { Optional } from '../types';
 
 export abstract class ICrudService<M, CP, UP, FO> {
     public abstract find(options: FO): Promise<M[]>;

@@ -1,4 +1,4 @@
-import { Identifiable } from '../types/common';
+import { Identifiable } from '../types';
 
 export interface BaseFindOptions<I = string> {
     id?: I[];

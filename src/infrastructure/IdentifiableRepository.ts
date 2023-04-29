@@ -1,6 +1,6 @@
 import { FindOptionsWhere } from 'typeorm';
 
-import { Class, Optional } from '../types/common';
+import { Class, Optional } from '../types';
 
 import { ConflictError, NotFoundError } from '../http-error';
 import { isDefined } from '../utils/isDefined';

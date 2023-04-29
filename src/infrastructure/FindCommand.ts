@@ -1,7 +1,7 @@
 import { SelectQueryBuilder } from 'typeorm';
 import { assign, isEmpty, isNull, isUndefined, isArray } from 'lodash';
 
-import { Class, Nullable } from '../types/common';
+import { Class, Nullable } from '../types';
 
 import { TransactionManager } from './TransactionManager';
 

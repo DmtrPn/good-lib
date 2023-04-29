@@ -1,7 +1,7 @@
 import { FindOptionsWhere } from 'typeorm';
 
 import { CrudService } from './CrudService';
-import { Optional } from '../types/common';
+import { Optional } from '../types';
 
 export abstract class IdentityCrudService<
     M extends object & { id: string },

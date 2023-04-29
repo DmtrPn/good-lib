@@ -1,6 +1,6 @@
 import compact from 'lodash/compact';
 
-import type { Optional } from '../../types/common';
+import type { Optional } from '../../types';
 
 export const enum SortingOrder {
     ASC = 'asc',

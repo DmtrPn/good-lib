@@ -1,5 +1,5 @@
 import { DomainError } from './DomainError';
-import { Optional } from '../../types/common';
+import { Optional } from '../../types';
 
 export interface ExistenceErrorParams {
     entityName?: string;

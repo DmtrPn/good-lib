@@ -12,7 +12,7 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
-    "outDir": "dist",
+    "outDir": "",
     "rootDir": "src",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,

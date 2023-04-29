@@ -1,7 +1,7 @@
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 import castArray from 'lodash/castArray';
 
-import { Class, Attributes } from '../types/common';
+import { Class, Attributes } from '../types';
 
 import { TransactionManager } from './TransactionManager';
 import { FindCommand } from './FindCommand';

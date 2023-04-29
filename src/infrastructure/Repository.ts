@@ -1,6 +1,6 @@
 import { compact } from 'lodash';
 
-import { Class } from '../types/common';
+import { Class } from '../types';
 
 import { TransactionManager } from './TransactionManager';
 import { FindCommand } from './FindCommand';
