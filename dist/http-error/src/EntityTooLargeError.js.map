@@ -1,0 +1,1 @@
+{"version":3,"file":"EntityTooLargeError.js","sourceRoot":"","sources":["../../../src/http-error/src/EntityTooLargeError.ts"],"names":[],"mappings":";;;AAAA,2CAAwC;AACxC,mCAAoC;AAEpC,MAAa,mBAAoB,SAAQ,qBAAS;IAC9C,IAAW,IAAI;QACX,OAAO,iBAAS,CAAC,cAAc,CAAC;IACpC,CAAC;CACJ;AAJD,kDAIC"}

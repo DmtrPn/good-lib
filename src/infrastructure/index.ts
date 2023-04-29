@@ -8,4 +8,4 @@ export * from './IdentityCrudService';
 export * from './QueryService';
 export * from './Repository';
 export * from './TransactionManager';
-export * from './types';
+export type * from './types';
