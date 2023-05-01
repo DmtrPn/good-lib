@@ -86,7 +86,7 @@ class DateHelper {
         return (0, startOfDay_1.default)(date);
     }
     static getTime(date) {
-        return (new Date(date)).toLocaleString('ru-RU', { hour: 'numeric', minute: 'numeric' });
+        return new Date(date).toLocaleString('ru-RU', { hour: 'numeric', minute: 'numeric' });
     }
     static toLocalStringDate(value, withTime) {
         const date = new Date(value);

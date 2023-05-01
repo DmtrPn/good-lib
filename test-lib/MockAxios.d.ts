@@ -1,4 +1,4 @@
-import { AxiosRequestConfig } from 'axios';
+import { AxiosInstance, AxiosRequestConfig } from 'axios';
 export interface IMockAxios {
     getRequestHistory: AxiosRequestConfig[];
     putRequestHistory: AxiosRequestConfig[];
@@ -10,7 +10,7 @@ export interface IMockAxios {
 }
 export declare class MockAxios implements IMockAxios {
     private static instance?;
-    static getInstance(): MockAxios;
+    static getInstance(axios?: AxiosInstance): MockAxios;
     private mockAdapter;
     private constructor();
     get getRequestHistory(): AxiosRequestConfig[];

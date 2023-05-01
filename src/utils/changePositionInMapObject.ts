@@ -1,4 +1,8 @@
-export const changePositionInMapObject = <K, V>(objMap: Map<K, V>, oldPosition: number, newPosition: number): Map<K, V>  => {
+export const changePositionInMapObject = <K, V>(
+    objMap: Map<K, V>,
+    oldPosition: number,
+    newPosition: number,
+): Map<K, V> => {
     const itemArray: [K, V][] = [];
 
     let newIndex = newPosition - 1;
@@ -12,7 +16,6 @@ export const changePositionInMapObject = <K, V>(objMap: Map<K, V>, oldPosition: 
 
     for (const item of objMap) {
         itemArray.push(item);
-
     }
 
     const item = itemArray[newIndex];

@@ -42,7 +42,6 @@ import mapValues from 'lodash/mapValues';
 
 import { Optional, Nullable } from '../types';
 
-
 export interface TimeData {
     hour: number;
     minutes: number;
@@ -116,7 +115,6 @@ interface FullAgeData {
 }
 
 export class DateHelper {
-
     public static now(): Date {
         return new Date();
     }
@@ -141,7 +139,7 @@ export class DateHelper {
     }
 
     public static getTime(date: DateType): string {
-        return (new Date(date)).toLocaleString('ru-RU', { hour: 'numeric', minute: 'numeric' });
+        return new Date(date).toLocaleString('ru-RU', { hour: 'numeric', minute: 'numeric' });
     }
 
     public static toLocalStringDate(value: DateType, withTime?: boolean): string {
@@ -149,17 +147,17 @@ export class DateHelper {
 
         const options: object = withTime
             ? {
-                year: 'numeric',
-                month: 'numeric',
-                day: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-            }
+                  year: 'numeric',
+                  month: 'numeric',
+                  day: 'numeric',
+                  hour: 'numeric',
+                  minute: 'numeric',
+              }
             : {
-                year: 'numeric',
-                month: 'numeric',
-                day: 'numeric',
-            };
+                  year: 'numeric',
+                  month: 'numeric',
+                  day: 'numeric',
+              };
 
         return date.toLocaleString('ru-RU', options);
     }
@@ -167,7 +165,7 @@ export class DateHelper {
     public static format(
         value: Optional<Nullable<DateType>>,
         formatParams: DateFormat | DateFormatItem,
-        defaultValue: string = '-'
+        defaultValue: string = '-',
     ): string {
         let formattedValue = defaultValue;
 
@@ -406,7 +404,10 @@ export class DateHelper {
         return areIntervalsOverlapping(interval, compareInterval);
     }
 
-    public static areIntervalOverlappingWithSomeInterval(interval: IntervalParams, compareIntervals: IntervalParams[]): boolean {
+    public static areIntervalOverlappingWithSomeInterval(
+        interval: IntervalParams,
+        compareIntervals: IntervalParams[],
+    ): boolean {
         return compareIntervals.some(compareInterval => this.areIntervalsOverlapping(interval, compareInterval));
     }
 

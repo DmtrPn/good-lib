@@ -2,10 +2,16 @@ import '@jest-decorated/core/globals';
 import '@testing-library/jest-dom';
 import { act } from '@testing-library/react';
 
+import { AxiosInstance } from 'axios';
+
 import { MockAxios, IMockAxios } from './MockAxios';
 
 export abstract class TestSuit {
-    protected mockAxios: IMockAxios = MockAxios.getInstance();
+    protected mockAxios: IMockAxios;
+
+    constructor(axios?: AxiosInstance) {
+        this.mockAxios = MockAxios.getInstance(axios);
+    }
 
     @BeforeEach()
     public beforeEach(): void {}

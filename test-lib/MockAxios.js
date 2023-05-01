@@ -7,14 +7,14 @@ exports.MockAxios = void 0;
 const axios_1 = __importDefault(require("axios"));
 const axios_mock_adapter_1 = __importDefault(require("axios-mock-adapter"));
 class MockAxios {
-    static getInstance() {
+    static getInstance(axios) {
         if (!this.instance) {
-            this.instance = new MockAxios();
+            this.instance = new MockAxios(axios);
         }
         return this.instance;
     }
-    constructor() {
-        this.mockAdapter = new axios_mock_adapter_1.default(axios_1.default);
+    constructor(customAxios) {
+        this.mockAdapter = new axios_mock_adapter_1.default(customAxios !== null && customAxios !== void 0 ? customAxios : axios_1.default);
     }
     get getRequestHistory() {
         return this.mockAdapter.history.get;

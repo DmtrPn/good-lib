@@ -1,4 +1,4 @@
-export const moveItemInArray = <V>(originArray: V[], oldPosition: number, newPosition: number): V[]  => {
+export const moveItemInArray = <V>(originArray: V[], oldPosition: number, newPosition: number): V[] => {
     const item = originArray[oldPosition];
     const length = originArray.length;
     const diff = oldPosition - newPosition;

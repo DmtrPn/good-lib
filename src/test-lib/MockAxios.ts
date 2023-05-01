@@ -1,6 +1,5 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-
 
 export interface IMockAxios {
     getRequestHistory: AxiosRequestConfig[];
@@ -14,16 +13,18 @@ export interface IMockAxios {
 
 export class MockAxios implements IMockAxios {
     private static instance?: MockAxios;
-    public static getInstance(): MockAxios {
+    public static getInstance(axios?: AxiosInstance): MockAxios {
         if (!this.instance) {
-            this.instance = new MockAxios();
+            this.instance = new MockAxios(axios);
         }
 
         return this.instance;
     }
 
-    private mockAdapter = new MockAdapter(axios);
-    private constructor() {}
+    private mockAdapter: MockAdapter;
+    private constructor(customAxios?: AxiosInstance) {
+        this.mockAdapter = new MockAdapter(customAxios ?? axios);
+    }
 
     public get getRequestHistory(): AxiosRequestConfig[] {
         return this.mockAdapter.history.get;

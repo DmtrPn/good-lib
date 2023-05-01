@@ -15,8 +15,8 @@ require("@testing-library/jest-dom");
 const react_1 = require("@testing-library/react");
 const MockAxios_1 = require("./MockAxios");
 class TestSuit {
-    constructor() {
-        this.mockAxios = MockAxios_1.MockAxios.getInstance();
+    constructor(axios) {
+        this.mockAxios = MockAxios_1.MockAxios.getInstance(axios);
     }
     beforeEach() { }
     afterEach() {
