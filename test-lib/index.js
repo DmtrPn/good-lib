@@ -17,4 +17,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./abstract"), exports);
 __exportStar(require("./expectError"), exports);
 __exportStar(require("./FakeParams"), exports);
+__exportStar(require("./MockAxios"), exports);
+__exportStar(require("./TestSuit"), exports);
 //# sourceMappingURL=index.js.map
