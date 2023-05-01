@@ -14,10 +14,10 @@ class FakeParams {
     static getUuidArray(count = 1) {
         return (0, times_1.default)(count, () => this.getUuid());
     }
-    static getName() {
-        return this.change.word();
+    static getWord(options) {
+        return this.change.word(options);
     }
-    static getText() {
+    static getText(options) {
         return this.change.sentence();
     }
     static getEmail() {

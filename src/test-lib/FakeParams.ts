@@ -2,11 +2,6 @@ import { v4 as uuid } from 'uuid';
 import times from 'lodash/times';
 import { Chance } from 'chance';
 
-interface IntegerOptions {
-    min: number;
-    max: number;
-}
-
 export class FakeParams {
     private static change = new Chance();
 
@@ -18,11 +13,11 @@ export class FakeParams {
         return times(count, () => this.getUuid());
     }
 
-    public static getName(): string {
-        return this.change.word();
+    public static getWord(options?: Chance.WordOptions): string {
+        return this.change.word(options);
     }
 
-    public static getText(): string {
+    public static getText(options: Chance.SentenceOptions): string {
         return this.change.sentence();
     }
 
@@ -34,7 +29,7 @@ export class FakeParams {
         return this.change.url();
     }
 
-    public static getInteger(params: IntegerOptions = { min: 0, max: 100 }): number {
+    public static getInteger(params: Chance.IntegerOptions = { min: 0, max: 100 }): number {
         return this.change.integer(params);
     }
 
