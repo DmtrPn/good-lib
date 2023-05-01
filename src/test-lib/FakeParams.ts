@@ -13,11 +13,11 @@ export class FakeParams {
         return times(count, () => this.getUuid());
     }
 
-    public static getWord(options?: Chance.WordOptions): string {
+    public static getWord(options?: Partial<Chance.WordOptions>): string {
         return this.change.word(options);
     }
 
-    public static getText(options: Chance.SentenceOptions): string {
+    public static getText(options: Partial<Chance.SentenceOptions>): string {
         return this.change.sentence();
     }
 
@@ -29,7 +29,7 @@ export class FakeParams {
         return this.change.url();
     }
 
-    public static getInteger(params: Chance.IntegerOptions = { min: 0, max: 100 }): number {
+    public static getInteger(params: Partial<Chance.IntegerOptions> = { min: 0, max: 100 }): number {
         return this.change.integer(params);
     }
 
