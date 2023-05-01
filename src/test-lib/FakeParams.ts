@@ -1,4 +1,5 @@
 import { v4 as uuid } from 'uuid';
+import times from 'lodash/times';
 import { Chance } from 'chance';
 
 interface IntegerOptions {
@@ -9,8 +10,12 @@ interface IntegerOptions {
 export class FakeParams {
     private static change = new Chance();
 
-    public static getId(): string {
+    public static getUuid(): string {
         return uuid();
+    }
+
+    public static getUuidArray(count = 1): string[] {
+        return times(count, () => this.getUuid());
     }
 
     public static getName(): string {

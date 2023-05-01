@@ -1,11 +1,18 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FakeParams = void 0;
 const uuid_1 = require("uuid");
+const times_1 = __importDefault(require("lodash/times"));
 const chance_1 = require("chance");
 class FakeParams {
-    static getId() {
+    static getUuid() {
         return (0, uuid_1.v4)();
+    }
+    static getUuidArray(count = 1) {
+        return (0, times_1.default)(count, () => this.getUuid());
     }
     static getName() {
         return this.change.word();

@@ -4,7 +4,8 @@ interface IntegerOptions {
 }
 export declare class FakeParams {
     private static change;
-    static getId(): string;
+    static getUuid(): string;
+    static getUuidArray(count?: number): string[];
     static getName(): string;
     static getText(): string;
     static getEmail(): string;
